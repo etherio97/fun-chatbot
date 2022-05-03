@@ -1,9 +1,9 @@
-const { Router } = require('express');
+const { Router, json } = require('express');
 const handleMessage = require('../functions/handleMessage');
 
 const router = Router();
 
-router.use(express.json());
+router.use(json());
 
 router.post('/telegram', async (req, res) => {
   const { message } = req.body;
